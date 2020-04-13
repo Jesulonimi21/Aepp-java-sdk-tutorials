@@ -47,7 +47,7 @@ and finally add this dependency to the dependency section of your project
  ce,Keypair.
   - AeternityService: It is the central access point to all Services
   - AeternityServiceFactory: Used to provide a Singleton instance of the AeternityService
-  - AeternityServiceConfiguration: Used to confogure the AeternityService object
+  - AeternityServiceConfiguration: Used to configure the AeternityService object
   - KeyPairService: It is used to create A keypair
   - KeyPair: An existence of a wallet on the aeternity blockchain, contains access to publicKey, privateKey,...
     
