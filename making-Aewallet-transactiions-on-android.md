@@ -80,10 +80,10 @@ private val nodeBaseUrl="https://sdk-testnet.aepps.com"
  lets create a function called ``createAccountFromMnemonic`` that will create a keypair
  ```kotlin
    fun createAeAccountFromMnemonic(){
-         mnemonicKeyPair=keyPairService.generateMasterMnemonicKeyPair(null)
-         userKeyPair = EncodingUtils.createBaseKeyPair(keyPairService.generateDerivedKey(mnemonicKeyPair, true))
+        mnemonicKeyPair=keyPairService.generateMasterMnemonicKeyPair(null)
+        userKeyPair = EncodingUtils.createBaseKeyPair(keyPairService.generateDerivedKey(mnemonicKeyPair, true))
         Log.d("usersMnemonicSeedWord",mnemonicKeyPair.mnemonicSeedWords.joinToString{it+" "})
-        Log.d("usersKeys",keyPairAlice.privateKey+"\n ${keyPairAlice.publicKey}")
+        Log.d("usersKeys",userKeyPair.privateKey+"\n ${userKeyPair.publicKey}")
     }
  ```
  
