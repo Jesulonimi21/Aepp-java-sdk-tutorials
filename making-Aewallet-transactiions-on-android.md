@@ -34,7 +34,7 @@ Now, in your app level build.gradle file, add the code below just after the clos
         exclude 'lib/x86_64/linux/libscrypt.so'
     }
 ```
-and finally add this dependency to the dependency section of your project
+and finally add this dependency to the dependency section of your project and click ``sync now``
  
    ``` implementation 'com.kryptokrauts:aepp-sdk-java:2.2.1'  ```
    
