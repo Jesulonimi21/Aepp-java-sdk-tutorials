@@ -61,9 +61,12 @@ lateinit var aeternityService:AeternityService
 private val aeternalBaseUrl="https://testnet.aeternal.io";
 private val nodeBaseUrl="https://sdk-testnet.aepps.com"
   ```
- Then in your onCreate function  initialize your ``aeternityService`` and ``keypairService``  variables
+ Then in your onCreate function  initialize your ``aeternityService`` and ``keypairService``  variables, we also need to disable Vert.x
+ from  creating a cache folder to avoid an exception,Since the aepp-sdk-java creates an instance of it behind the scenes
  
  ```kotlin
+   System.setProperty("vertx.disableFileCPResolving", "true")
+   
    aeternityService=AeternityServiceFactory().getService(
             AeternityServiceConfiguration.configure()
                 .baseUrl(nodeBaseUrl)
