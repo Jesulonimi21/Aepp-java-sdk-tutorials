@@ -43,10 +43,11 @@ and finally add this dependency to the dependency section of your project
     
     
  ## Wallet creation
- To create a wallet, we need to make use of some classes which include the AeternityService,AeternityServiceFactory,KeyPairServi
+ To create a wallet, we need to make use of some classes which include the AeternityService,AeternityServiceFactory,AeternityServiceConfiguration,KeyPairServi
  ce,Keypair.
   - AeternityService: It is the central access point to all Services
-  - AeternityServiceFactory: Provides configuration methods for the AeternityService
+  - AeternityServiceFactory: Used to provide a Singleton instance of the AeternityService
+  - AeternityServiceConfiguration: Used to confogure the AeternityService object
   - KeyPairService: It is used to create A keypair
   - KeyPair: An existence of a wallet on the aeternity blockchain, contains access to publicKey, privateKey,...
     
