@@ -119,7 +119,7 @@ fun getAeBalance(var publicAddress:String){
 ```
  # Things To Note
   - BigDecimal and BigInteger are used instead of  double, float and int for a higher precision while making calculation
-  - It is important to rememnber to put most of this operations in another thread using coroutines, Thread or AsyncTasks
+  - It is important to remember to put most of this operations in another thread using coroutines, Thread or AsyncTasks
   - You can always check out the documentation here https://kryptokrauts.gitbook.io/aepp-sdk-java/use-the-sdk/overview-structure
     understand any class better
     
