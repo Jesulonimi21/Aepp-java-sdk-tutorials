@@ -103,7 +103,7 @@ send tokens from his wallet
   ## Get Balance
     Lastly we will create a function to get the balance of a user using his public address
     
-```   
+```kotlin   
 fun getAeBalance(var publicAddress:String){
 
         var account= aeternityService.accounts.blockingGetAccount(Optional.of(publicAddress))
