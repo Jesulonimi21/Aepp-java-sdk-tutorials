@@ -4,10 +4,10 @@
 This tutorial is mend for android developers who want to begin to build interesting applications on the aeternity blockchain.
 In this tutorial we will cover the following:
 - Wallet Creation
-- Check Wallet Balance
+- Checking Wallet Balance
 - Token transfer
 
-## Perequisites
+## Prerequisites
 - A familiarity with the kotlin programming language
 - Basic understanding of some blockchain terminologies
 
@@ -43,8 +43,7 @@ and finally add this dependency to the dependency section of your project and cl
     
     
  ## Wallet creation
- To create a wallet, we need to make use of some classes which include the AeternityService,AeternityServiceFactory,AeternityServiceConfiguration,KeyPairServi
- ce,Keypair.
+ To create a wallet, we need to make use of some classes which include the AeternityService,AeternityServiceFactory,AeternityServiceConfiguration,KeyPairService,Keypair.
   - AeternityService: It is the central access point to all Services
   - AeternityServiceFactory: Used to provide a Singleton instance of the AeternityService
   - AeternityServiceConfiguration: Used to configure the AeternityService object
@@ -87,8 +86,8 @@ private val nodeBaseUrl="https://sdk-testnet.aepps.com"
     }
  ```
  
- ## TransferTokens
-  Next we will create a function called ``SendAe`` that will receive as input two Strings, one for the publicAddress and the other for
+ ## Transfer Tokens
+  Next we will create a function called ``sendAe`` that will receive as input two Strings, one for the publicAddress and the other for
   the amount
   ```kotlin
     fun sendAe(var pAddrToSend:String,var amount:String){
@@ -103,7 +102,7 @@ private val nodeBaseUrl="https://sdk-testnet.aepps.com"
   Notice how we use the privateKey field on the userKeyPair object to access the private key of the already created user so as to
 send tokens from his wallet  
   
-  ## Get Balance
+  ## Checking Wallet Balance
     Lastly we will create a function to get the balance of a user using his public address
     
 ```kotlin   
@@ -119,9 +118,9 @@ fun getAeBalance(var publicAddress:String){
 ```
  # Things To Note
   - BigDecimal and BigInteger are used instead of  double, float and int for a higher precision while making calculation
-  - It is important to remember to put most of this operations in another thread using coroutines, Thread or AsyncTasks
+  - It is important to remember to put most of this operations in another thread using Coroutines, Thread or AsyncTasks
   - You can always check out the documentation here https://kryptokrauts.gitbook.io/aepp-sdk-java/use-the-sdk/overview-structure
-    understand any class better
+    to understand any class better
     
  
    
