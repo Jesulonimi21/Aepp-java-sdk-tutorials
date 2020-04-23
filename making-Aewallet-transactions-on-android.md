@@ -34,6 +34,7 @@ Now, in your app level build.gradle file, add the code below just after the clos
         exclude 'lib/x86_64/linux/libscrypt.so'
     }
 ```
+
 and finally add this dependency to the dependency section of your project and click ``sync now``
  
    ``` implementation 'com.kryptokrauts:aepp-sdk-java:2.2.1'  ```
@@ -117,6 +118,7 @@ fun getAeBalance(var publicAddress:String){
     }
 ```
  # Things To Note
+  - This tutorial was done using the gradle pugin 3.6.0 and Gradle build tools version 5.4.6
   - BigDecimal and BigInteger are used instead of  double, float and int for a higher precision while making calculation
   - It is important to remember to put most of this operations in another thread using Coroutines, Thread or AsyncTasks
   - You can always check out the documentation here https://kryptokrauts.gitbook.io/aepp-sdk-java/use-the-sdk/overview-structure
