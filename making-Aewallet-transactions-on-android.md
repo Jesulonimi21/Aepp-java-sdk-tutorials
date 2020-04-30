@@ -86,6 +86,22 @@ private val nodeBaseUrl="https://sdk-testnet.aepps.com"
         Log.d("usersKeys",userKeyPair.privateKey+"\n ${userKeyPair.publicKey}")
     }
  ```
+ You might also want to create a wallet without using a mnemonic. To do this, all you need to do is to call the generateBaseKeyPair      function directly on the KeyPairService instance
+ ```kotlin
+ fun createAccountWithoutMnemonic(){
+  userKeyPair= keyPairService.generateBaseKeyPair()
+   Log.d("usersKeys",userKeyPair.privateKey+"\n ${userKeyPair.publicKey}")
+ }
+ ```
+ Then you can always recover the created Keypair by using the privateKey
+ ```kotlin
+  fun recoverWalletFromPrivateKey(){
+  var recoverredKeyPair= keyPairService.generateBaseKeyPairFromSecret(userKeyPair.privateKey);
+   Log.d("usersKeys",recoverredKeyPair.privateKey+"\n ${recoverredKeyPair.publicKey}")
+  }
+ ```
+ 
+ 
  
  ## Transfer Tokens
   Next we will create a function called ``sendAe`` that will receive as input two Strings, one for the publicAddress and the other for
