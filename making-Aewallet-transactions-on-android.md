@@ -77,6 +77,8 @@ private val nodeBaseUrl="https://sdk-testnet.aepps.com"
    keyPairService=KeyPairServiceFactory().service    
  ```
  ## Creating a Keypair
+ We will cover two ways to create a KeyPair object, the first is creating a Keypair using a Mnemonic String and the other is creating a  KeyPair without a mnemonic string.
+### Creating A Keypair With A Mnemonic String
  lets create a function called ``createAccountFromMnemonic`` that will create a keypair
  ```kotlin
    fun createAeAccountFromMnemonic(){
@@ -86,7 +88,8 @@ private val nodeBaseUrl="https://sdk-testnet.aepps.com"
         Log.d("usersKeys",userKeyPair.privateKey+"\n ${userKeyPair.publicKey}")
     }
  ```
- You might also want to create a wallet without using a mnemonic. To do this, all you need to do is to call the generateBaseKeyPair      function directly on the KeyPairService instance
+ one thing to note presently is that there is a slight bug with creating a keypair with a mnemonic, you can follow the issue on github here https://github.com/kryptokrauts/aepp-sdk-java/issues/126
+ ### Creating A KeyPair Without A Mnemonic String
  ```kotlin
  fun createAccountWithoutMnemonic(){
   userKeyPair= keyPairService.generateBaseKeyPair()
