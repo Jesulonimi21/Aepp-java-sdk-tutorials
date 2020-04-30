@@ -77,7 +77,7 @@ private val nodeBaseUrl="https://sdk-testnet.aepps.com"
    keyPairService=KeyPairServiceFactory().service    
  ```
  ## Creating a Keypair
- We will cover two ways to create a KeyPair object, the first is creating a Keypair using a Mnemonic String and the other is creating a  KeyPair without a mnemonic string.
+ We will cover two ways to create a KeyPair object, the first is creating a Keypair object using a mnemonic String and the other is creating a  KeyPair object without a mnemonic string.
 ### Creating A Keypair With A Mnemonic String
  lets create a function called ``createAccountFromMnemonic`` that will create a keypair
  ```kotlin
